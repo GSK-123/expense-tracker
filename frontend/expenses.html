@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Expenses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="expenses.js" defer></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex min-h-screen items-center justify-center px-4">
+        <div class="w-full max-w-4xl">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="mb-6 text-3xl font-bold text-center text-gray-900">Your Expenses</h2>
+                <div class="mb-6">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Name
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Amount
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Date
+                                </th>
+                                <th scope="col" class="relative px-6 py-3">
+                                    <span class="sr-only">Edit</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="expensesList" class="bg-white divide-y divide-gray-200">
+                        </tbody>
+                    </table>
+                </div>
+                <button onclick="loadExpenses()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Refresh Expenses
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = loadExpenses; 
+    </script>
+</body>
+</html>

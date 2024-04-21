@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Expense</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="expenses.js" defer></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex min-h-screen items-center justify-center px-4">
+        <div class="w-full max-w-md">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="mb-6 text-3xl font-bold text-center text-gray-900">Add New Expense</h2>
+                <form class="space-y-6" id="createExpenseForm">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700" for="expenseName">
+                            Expense Name
+                        </label>
+                        <input class="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" id="expenseName" type="text" placeholder="e.g., Coffee">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700" for="expenseAmount">
+                            Amount ($)
+                        </label>
+                        <input class="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" id="expenseAmount" type="number" placeholder="e.g., 4.50">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700" for="expenseDate">
+                            Date
+                        </label>
+                        <input class="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" id="expenseDate" type="date">
+                    </div>
+                    <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="createExpense(event)">
+                        Add Expense
+                    </button>
+                </form>
+                <p class="mt-6 text-center text-xs text-gray-500">
+                    &copy;2024 Kang Corp. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
